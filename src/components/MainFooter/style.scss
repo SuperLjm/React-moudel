@@ -1,0 +1,24 @@
+@import '@/lib/reset.scss';
+
+footer{
+    @include rect(100%, 0.5rem);
+    @include background-color(#ccc);
+    ul{
+        @include flexbox();
+        @include rect(100%, 100%);
+        li{
+           @include flex();
+           @include rect(100%, auto);
+           @include flexbox();
+           @include justify-content();
+           @include flex-direction(column);
+           @include align-items();
+           a{
+               @include text-color(#333);
+               &.active{
+                   @include text-color(red);
+               }
+           }
+        }
+    }
+}

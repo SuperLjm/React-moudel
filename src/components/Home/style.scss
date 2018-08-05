@@ -1,0 +1,178 @@
+@import '@/lib/reset.scss';
+
+.home{
+    @include flexbox();
+    @include flex();
+    @include overflow();
+    @include flex-direction(column);
+    @include background-color(#eeeeee);
+    @include rect(100%, 100%);
+    header{
+        height: 50px;
+        img{
+            margin-left: 15px;
+        }
+        .header-right{
+            .header-rig{
+                color: #7e7e7e;
+                z-index: 1;
+                position: absolute;
+                @include rect(100px, 88px);
+                right: -14px;
+                top: 0.3rem;
+                background: #ffffff;
+                .login {
+                    @include rect(100%, 35%);
+                    @include text-align(center);
+                    line-height: 42px;
+                    color: #7e7e7e !important;
+                }
+            }
+            @include text-color(#f05b72);
+            display: inline-block;
+            margin-right: 15px;
+            position: relative;
+        }
+        @include rect(100%, 0.44rem);
+        @include background-color(#ffffff);
+        @include flexbox();
+        @include flex-direction();
+        @include justify-content();
+        @include align-items();
+        .header-content{
+            @include flex();
+        }
+    }
+    .bannerr{
+        .am-carousel-wrap-dot-active > span {
+            background: #f05b72;
+        }
+        .am-carousel-wrap-dot > span {
+            display: block;
+            width: 8px;
+            height: 1px;
+            margin: 0 3px;
+            
+        }
+        position: relative;
+        width: 100%;
+        .am-wingblank{
+            width: 100%;
+            margin: 0;
+        }
+        .city{
+            @include rect(100%, auto);
+            .patth{
+                display: inline-block;
+                @include rect(80%, auto);
+            }
+            z-index: 1000;
+            position: absolute;
+            @include text-color(#ffffff);
+            left: 10px;
+            bottom: 10px;
+            @include font-size(14px);
+            .price{
+                margin-left: 10px;
+                display: inline-block;
+            }
+        }
+    }
+    .location{
+        @include rect(100%, 0.3rem);
+        text-align: center;
+        line-height: 0.3rem;
+        a{
+            @include font-size(12px);
+            color: #7e7e7e;
+            &.left-location{
+                margin-right: 20px;
+            }
+            &.right-location{
+                margin-left: 20px;
+            }
+        }
+    }
+    .teex{
+        margin-bottom: 0.1rem; 
+        @include rect(100%, auto);
+        .tex{
+            @include rect(95%, auto);
+            margin-left: 0.1rem;
+        }
+    }
+    footer{
+        @include rect(100%, auto);
+        position: relative;
+        .jinhua{
+            span{
+                margin-left: 10px;
+            }
+            position: absolute;
+            left: 150px;
+            top: 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .banner-bottom{
+            .am-carousel-wrap{
+                display: none;
+            }
+            margin-top: 40px;
+            .swer{
+                .fang{
+                    color: #f05b72;
+                    padding: 10px;
+                }
+                p{
+                    color: #7e7e7e; 
+                    font-size: 17px;
+                    padding: 18px 10px 20px 10px;
+                    @include rect(500px, auto);
+                }
+                @include flexbox();
+                @include rect(100%,auto);
+                .imgage{
+                    padding-top: 10px;
+                    padding-left: 10px;
+                    margin-right: 10px;
+                    display: inline-block;
+                    @include rect(174px, 160px);
+                    .img{
+                        @include rect(100%, 100%);
+                    }
+                }
+            }
+        }
+}
+@-webkit-keyframes slideInDown {
+    0% {
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    }
+  
+    100% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes slideInDown {
+    0% {
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    }
+  
+    100% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .slideInDown {
+    -webkit-animation: slideInDown 0.2s linear both;
+    animation: slideInDown 0.2s linear both;
+  }
+}

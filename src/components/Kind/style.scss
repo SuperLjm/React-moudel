@@ -1,0 +1,48 @@
+@import '@/lib/reset.scss';
+
+.main{
+    @include flex-direction(column); // 子元素纵向排列 
+    header {
+        @include rect(100%, 0.45rem);
+        @include background-color(#f66);
+        @include flexbox();
+        .back-to{
+            color: #ffffff;
+            font-weight: 900;
+            margin-right: 1rem;
+            padding: 5px;
+        }
+    }
+    .content{ 
+        @include flex();
+        @include rect(100%, auto);
+        @include overflow();
+        &.kindContent{
+            @include rect(100%, 100%);
+            @include flexbox();
+            .kindMenu{
+                @include overflow;
+                @include rect(1rem, 100%);
+                li{
+                    @include rect(100%, 0.6rem);
+                    @include border(0 0 1px 0, #ccc);
+                    @include flexbox();
+                    @include flex-direction(column);
+                    @include align-items();
+                    @include justify-content();
+                    a{
+                        @include text-color(#000000);
+                        &.active{
+                            @include text-color(red);
+                        }
+                    }
+                }
+            }
+            .kindList{
+                @include flex();
+                @include rect(auto, 100%);
+                @include overflow();
+            }
+        }
+    }
+}
